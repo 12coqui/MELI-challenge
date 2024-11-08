@@ -1,0 +1,7 @@
+/node_modules
+/dist
+/coverage
+.env
+.prettierrc
+.jest.config.js
+/src/mutantDetector.test.js

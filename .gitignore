@@ -1,14 +1,31 @@
 # Node modules
-/node_modules
+
+node_modules/
 
 # Build output
-/dist
+dist/
 
 # Coverage directory
 /coverage
 
 # Environment variables
 .env
+
+
+# Prettier configuration
+.prettierrc
+
+# Jest configuration
+jest.config.js
+
+# Test output
+src/mutantDetector.test.js
+
+# NPM configuration
+package-lock.json
+
+# IDE configuration
+.vscode/
 
 # Tool configuration files
 .prettierrc

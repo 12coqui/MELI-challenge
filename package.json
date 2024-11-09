@@ -4,8 +4,9 @@
   "description": "mutant detector first commit",
   "main": "dist/server.ts",
   "scripts": {
-    "start": "ts-node src/server.ts",
-    "build": "tsc"
+    "build": "tsc",
+    "start": "node dist/server.js",
+    "dev": "ts-node src/server.ts"
   },
   "author": "",
   "license": "ISC",

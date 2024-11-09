@@ -1,11 +1,21 @@
+require('dotenv').config();
 import express from 'express';
+const moongoose = require('mongoose');
+const routes = require('./Routes/MutantRoutes');
 const app = express();
-const port = 3000;
 
-app.get('/', (req: express.Request, res: express.Response) => {
-  res.send('Mutant detector API');
-});
+app.use(express.json());
+app.use('/', routes);
 
-app.listen(port, () => {
-  console.log(`Server listening at http://localhost:${port}`);
-});
+moongoose
+	.connect(process.env.MONGODB_URI || '')
+	.then(() => {
+		const PORT = process.env.PORT || 3000;
+		app.listen(PORT, () => {
+			console.log(`Server is running on port ${PORT}`);
+		});
+		console.log('Connected to MongoDB');
+	})
+	.catch((err: any) => {
+		console.log(err);
+	});

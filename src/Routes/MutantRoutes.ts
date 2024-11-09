@@ -1,9 +1,9 @@
 import express from 'express';
 const router = express.Router();
-const { checkForMutant, getStats } = require('../Controllers/MutantController');
+import { checkForMutant, getStats } from '../Controllers/MutantController';
 
 router.post('/mutant', checkForMutant);
 
 router.post('/stats', getStats);
 
-module.exports = router;
+export { router };

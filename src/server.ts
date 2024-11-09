@@ -1,15 +1,16 @@
 require('dotenv').config();
-import express from 'express';
-const moongoose = require('mongoose');
-import { router } from './Routes/MutantRoutes';
+import express, { Request, Response } from 'express';
+const mongoose = require('mongoose');
+const router = require('./Routes/MutantRoutes');
 const app = express();
 
 app.use(express.json());
 app.use('/api', router);
-app.get('/', (req, res) => {
+app.get('/', (_req: Request, res: Response) => {
   res.send('Hello World');
 });
-moongoose
+
+mongoose
   .connect(process.env.MONGODB_URI)
   .then(() => {
     const PORT = process.env.PORT || 3000;

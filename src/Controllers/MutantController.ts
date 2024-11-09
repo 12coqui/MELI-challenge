@@ -71,4 +71,4 @@ async function getStats(req: Request, res: Response) {
   }
 }
 
-export { checkForMutant, getStats };
+module.exports = { checkForMutant, getStats };

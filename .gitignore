@@ -1,11 +1,16 @@
 # Node modules
+
 node_modules/
 
 # Build output
 dist/
 
+# Coverage directory
+/coverage
+
 # Environment variables
 .env
+
 
 # Prettier configuration
 .prettierrc
@@ -22,5 +27,23 @@ package-lock.json
 # IDE configuration
 .vscode/
 
-# Nodemon configuration
+# Tool configuration files
+.prettierrc
+jest.config.js
 nodemon.json
+
+# Compiled test files
+/src/mutantDetector.test.js
+
+# Logs
+*.log
+
+# TypeScript cache
+*.tsbuildinfo
+
+# IDE specific files
+.vscode/
+.idea/
+
+# NPM lock files
+package-lock.json

@@ -2,7 +2,7 @@
   "name": "meli-challenge",
   "version": "1.0.0",
   "description": "mutant detector first commit",
-  "main": "server.ts",
+  "main": "dist/server.ts",
   "scripts": {
     "start": "ts-node src/server.ts",
     "build": "tsc"

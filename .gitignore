@@ -24,6 +24,3 @@ nodemon.json
 # IDE specific files
 .vscode/
 .idea/
-
-# NPM lock files
-package-lock.json

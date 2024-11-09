@@ -6,4 +6,6 @@ router.post('/mutant', checkForMutant);
 
 router.post('/stats', getStats);
 
+router.get('/stats', getStats);
+
 export { router };

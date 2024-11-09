@@ -1,7 +1,20 @@
-/node_modules
-/dist
-/coverage
+# Node modules
+node_modules/
+
+# Build output
+dist/
+
+
+# Environment variables
 .env
+
+# Prettier configuration
 .prettierrc
-.jest.config.js
-/src/mutantDetector.test.js
+
+# Jest configuration
+jest.config.js
+
+# Test output
+src/mutantDetector.test.js
+
+package-lock.json

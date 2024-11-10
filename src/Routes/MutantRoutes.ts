@@ -4,6 +4,6 @@ const { checkForMutant, getStats } = require('../Controllers/MutantController');
 
 router.post('/mutant', checkForMutant);
 
-router.post('/stats', getStats);
+router.get('/stats', getStats);
 
 module.exports = router;

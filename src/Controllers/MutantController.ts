@@ -53,7 +53,7 @@ async function checkForMutant(req: Request, res: Response) {
         .json({ message: `This DNA ${dna} correspond to a Human` });
     }
   } catch (err) {
-    res.status(500).json({ message: 'Internal Server Error' });
+    res.status(500).json({ error: err });
   }
 }
 
@@ -67,7 +67,7 @@ async function getStats(req: Request, res: Response) {
       res.status(404).json({ message: 'Stats not found' });
     }
   } catch (err) {
-    res.status(500).json({ message: 'Internal Server Error' });
+    res.status(500).json({ error: err });
   }
 }
 

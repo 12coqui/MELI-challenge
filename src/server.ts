@@ -1,13 +1,13 @@
 require('dotenv').config();
 import express, { Request, Response } from 'express';
 const mongoose = require('mongoose');
-const router = require('./Routes/MutantRoutes');
+const routes = require('./Routes/MutantRoutes');
 const app = express();
 
 app.use(express.json());
-app.use('/api', router);
+app.use('/api', routes);
 app.get('/', (_req: Request, res: Response) => {
-  res.send('Hello World');
+  res.send('<h1>Leandro Serra - MELI Mutant Challenge</h1>');
 });
 
 mongoose
